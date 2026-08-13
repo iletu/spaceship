@@ -5,11 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spaceship I</title>
-    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
+    <h1>SPACESHIP</h1>
+    <section id="renderStatus">
+    </section>
 
+    <!-- USE REPAIR KIT -->
+    <section>
+        <button id="repairButton" onclick="useRepairKit()">REPAIR</button>
+        <p id="repairMessage"></p>
+    </section>
+
+    <!-- BUY-SECTION -->
+    <section id="buy-section">
+        <input type="number" id="repairInput" placeholder="buy repair kit">
+        <button id="attackButton" onclick="buyRepairKit()">BUY</button>
+        <p id="buyMessage"></p>
+
+    </section>
+
+
+    <!-- DAMAGE-SECTION -->
+    <section id="damage-section">
+        <input type="number" id="damageInput" placeholder="attack the ship">
+        <button id="attackButton" onclick="getDamage()">ATTACK</button>
+        <p id="damageMessage"></p>
+    </section>
+
+    <p id="errorMessage"></p>
+    <p id="infoMessage"></p>
+
+    <script src="./script.js"></script>
 </body>
+
 
 </html>
