@@ -9,34 +9,48 @@
 </head>
 
 <body>
-    <h1>SPACESHIP</h1>
-    <section id="renderStatus">
+    <section class="container-card">
+        <section class="card class=" status" id="renderStatus">
+        </section>
+
+        <!-- USE REPAIR KIT -->
+        <section class="card">
+            <h3>USE REPAIR KIT</h3>
+            <p>Repair your spaceship and restore 50 health points.</p>
+            <button id="repairButton" onclick="useRepairKit()">Use Repair Kit</button>
+            <p id="repairMessage"></p>
+        </section>
+
+        <!-- BUY-SECTION -->
+        <section class="card" id="buy-section">
+            <h3>BUY REPAIR KIT</h3>
+            <p>Buy repair kits with your Star Coins</p>
+            <div>
+                <label for="repairInput">Amount:</label>
+                <input type="number" id="repairInput" placeholder="1 repair kit">
+            </div>
+            <button id="attackButton" onclick="buyRepairKit()">Buy Repair Kit</button>
+            <p id="buyMessage"></p>
+
+        </section>
+
+
+        <!-- DAMAGE-SECTION -->
+        <section class="card" id="damage-section">
+            <h3>ENEMY ATTACK</h3>
+            <p>Enter the amount of damage the enemy deals to your spaceship.</p>
+            <div>
+                <label for="damageInput">Damage:</label>
+                <input type="number" id="damageInput" placeholder="20% damage">
+            </div>
+            <button id="damageButton" onclick="getDamage()">Attack the Spaceship</button>
+            <p id="damageMessage"></p>
+        </section>
     </section>
-
-    <!-- USE REPAIR KIT -->
-    <section>
-        <button id="repairButton" onclick="useRepairKit()">REPAIR</button>
-        <p id="repairMessage"></p>
+    <section class="message">
+        <p id="errorMessage"></p>
+        <p id="infoMessage"></p>
     </section>
-
-    <!-- BUY-SECTION -->
-    <section id="buy-section">
-        <input type="number" id="repairInput" placeholder="buy repair kit">
-        <button id="attackButton" onclick="buyRepairKit()">BUY</button>
-        <p id="buyMessage"></p>
-
-    </section>
-
-
-    <!-- DAMAGE-SECTION -->
-    <section id="damage-section">
-        <input type="number" id="damageInput" placeholder="attack the ship">
-        <button id="attackButton" onclick="getDamage()">ATTACK</button>
-        <p id="damageMessage"></p>
-    </section>
-
-    <p id="errorMessage"></p>
-    <p id="infoMessage"></p>
 
     <script src="./script.js"></script>
 </body>

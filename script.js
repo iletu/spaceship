@@ -125,7 +125,7 @@ function getDamage() {
         shipHealth = 0;
         showError("Your ship is destroyed. Game Over!");
     } else {
-        showInfo("You took " + damage + " damage.");
+        showError("You took " + damage + " damage.");
     }
 
     // den Inputfeld nach der Eingabe leeren
